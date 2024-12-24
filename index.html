@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Hearts Animation -->
+    <div class="floating-hearts"></div>
+   
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero">
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <h1>🎉 Happy Birthday, My Love! 🎂</h1>
+                <p>You are my sunshine, my love, my everything.</p>
+            </div>
+            <div class="carousel-slide ">
+                <h1>❤️ Forever Yours ❤️</h1>
+                <p>Every day with you is a blessing.</p>
+            </div>
+            <div class="carousel-slide 2">
+                <h1>🌟 You're My Star 🌟</h1>
+                <p>Wishing you a day full of love and magic.</p>
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+        <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+        <button onclick="revealSurprise()">Click for a Surprise</button>
+        <button onclick="openLoveLetter()">Read My Love Letter</button>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="countdown">
+        <h2>🎁 Time Left to Celebrate 🎁</h2>
+        <div id="timer"></div>
+    </section>
+
+    <!-- Gallery Section with Image Modal -->
+    <section class="gallery">
+        <h2>🌟 Our Beautiful Moments 🌟</h2>
+        <div class="gallery-container">
+            <img src="memory2.jpg" alt="Memory 1" onclick="openImageModal('memory2.jpg', 'Every moment with you is magical.')">
+            <img src="memory3.jpg" alt="Memory 2" onclick="openImageModal('memory3.jpg', 'You are the light of my life.')">
+            <img src="memory4.jpg" alt="Memory 3" onclick="openImageModal('memory4.jpg', 'Every smile of yours melts my heart.')">
+            <img src="memory6.jpg" alt="Memory 3" onclick="openImageModal('memory6.jpg', 'Beautiful ❤️👑.')">
+            <img src="memory5.jpg" alt="Memory 3" onclick="openImageModal('memory5.jpg', 'What a wonderful family you have.')">
+            <img src="memory.jpg" alt="Memory 3" onclick="openImageModal('memory.jpg', 'Your are so beautiful .')">
+   
+        </div>
+    </section>
+
+    <!-- Romantic Quotes Slider -->
+    <section class="quotes">
+        <h2>💖 Romantic Words for You 💖</h2>
+        <div class="quote-slider">
+            <div class="quote">"You are the sunshine that lights up my world."</div>
+            <div class="quote">"Every moment with you feels like a dream."</div>
+            <div class="quote">"You make my life so much better just by being in it."</div>
+        </div>
+    </section>
+
+    <!-- Personal Message Section -->
+    <section class="message">
+        <h2>💌 A Special Message for You 💌</h2>
+        <p>My dearest Favour, today is all about celebrating you. You light up my world in every way, and I’m so grateful to have you in my life. Happy Birthday, my love!</p>
+    </section>
+
+    <!-- Audio Message Section -->
+    <section class="audio-message">
+        <h2>🎶 A Special Message from Me 🎶</h2>
+        <audio controls>
+            <source src="hbd3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    
+       <!-- Memories Timeline -->
+    <section class="timeline">
+        <h2>📸 Our Journey Together 📸</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <h3>🎈 Our First Date</h3>
+                <p>It all started with a smile...</p>
+            </div>
+            <div class="timeline-item">
+                <h3>❤️ Our First Trip</h3>
+                <p>Memories that will last forever...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+       <p>With all my love, <strong>Halal</strong></p>
+    </footer>
+
+    <!-- Love Letter Modal -->
+    <div id="love-letter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoveLetter()">&times;</span>
+             <h2>💌 My Love Letter to You 💌</h2>
+            <p>Dear Queen Favy 👑, you are the most precious part of my life. Every moment spent with you is a treasure. I love you more than words can say. Happy Birthday, my darling! And I'm happy to be your friend. please manage this little birthday 🎉 gift of mine</p>
+        </div>
+    </div>
+
+<!-- Background Music Section -->
+<audio id="background-music" loop autoplay>
+    <source src="hbd.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<button id="music-toggle" onclick="toggleMusic()">🎵 Pause Music</button>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeImageModal()">&times;</span>
+            <img id="modal-image" src="" alt="Image Preview">
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

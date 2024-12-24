@@ -1,0 +1,299 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial, sans-serif';
+    background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('background.jpg') no-repeat center/cover;
+    color: white;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: #FF69B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background: #FF1493;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Personal Message Section */
+.message {
+    text-align: center;
+    padding: 40px 20px;
+    background: #FFD1DC;
+    margin: 50px 0;
+    border-radius: 10px;
+}
+
+/* Timeline Section */
+.timeline {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    background: #FFB6C1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #FF69B4;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('background.jpg') no-repeat center/cover;
+    color: white;
+}
+
+.hero button {
+    margin: 10px;
+    background: #FF69B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Floating Hearts Animation */
+.floating-hearts::before {
+    content: '❤️ ❤️ ❤️';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    animation: floatingHearts 20s infinite linear;
+}
+
+@keyframes floatingHearts {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+/* Countdown Timer */
+.countdown {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#timer {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Romantic Quotes Slider */
+.quote-slider {
+    text-align: center;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.quote {
+    font-size: 1.2em;
+    margin: 10px 0;
+    animation: fadeIn 5s infinite alternate;
+}
+
+/* Love Letter Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    width: 70%;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+/* Hero Section Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    text-align: center;
+}
+
+.carousel-slide {
+    display: none;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Image Modal */
+#image-modal img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#image-modal p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Modal General Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Background Music Toggle Button */
+#music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #FF69B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+#music-toggle:hover {
+    background: #D1477A;
+}
